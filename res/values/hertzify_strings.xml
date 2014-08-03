@@ -116,4 +116,8 @@
     <string name="private_dns_mode_quad9" translatable="false">Quad9 DNS</string>
     <!-- Quad9 DNS hostname -->
     <string name="private_dns_hostname_quad9" translatable="false">dns.quad9.net</string>
+
+    <!-- PIN scramble -->
+    <string name="unlock_scramble_pin_layout_title">Scramble layout</string>
+    <string name="unlock_scramble_pin_layout_summary">Scramble PIN layout when unlocking device</string>
 </resources>
