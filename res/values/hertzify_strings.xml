@@ -375,4 +375,8 @@
     <!-- Idle manager -->
     <string name="idle_manager_title">Idle manager</string>
     <string name="idle_manager_summary">Stop all non-essential background processes when the device is idle</string>
+
+    <!-- Pocket mode -->
+    <string name="proximity_wake_title">Prevent accidental wake-up</string>
+    <string name="proximity_wake_summary">Check the proximity sensor prior to waking up screen</string>
 </resources>
