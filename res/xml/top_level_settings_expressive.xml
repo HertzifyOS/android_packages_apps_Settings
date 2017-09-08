@@ -20,6 +20,21 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="top_level_settings">
 
+
+    <com.android.settingslib.widget.UntitledPreferenceCategory
+        android:order="-140"
+        android:key="top_level_hertzify_category">
+        <com.android.settings.widget.HomepagePreference
+            android:fragment="com.hertzify.settings.HertzifySettings"
+            android:icon="@drawable/ic_homepage_hertzify"
+            android:key="top_level_hertzify"
+            android:order="-160"
+            android:title="@string/hertzify_dashboard_title"
+            android:summary="@string/hertzify_dashboard_summary"
+            settings:highlightableMenuKey="@string/menu_key_hertzify"
+            settings:controller="com.hertzify.settings.TopLevelHertzifySettingsPreferenceController"/>
+    </com.android.settingslib.widget.UntitledPreferenceCategory>
+
     <com.android.settingslib.widget.UntitledPreferenceCategory
         android:order="-140"
         android:key="top_level_account_category"/>

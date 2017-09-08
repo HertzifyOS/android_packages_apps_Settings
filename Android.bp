@@ -56,17 +56,24 @@ android_library {
         "src/**/*.java",
         "src/**/*.kt",
         "src/**/*.aidl",
+        "HertzifySettings/src/**/*.java",
+        "HertzifySettings/src/**/*.kt",
     ],
     exclude_srcs: [
         "src/com/android/settings/biometrics/fingerprint2/lib/**/*.kt",
     ],
     javac_shard_size: 50,
     use_resource_processor: true,
+
+    aaptflags: ["--extra-packages com.hertzify.settings"],
+
     resource_dirs: [
         "res",
         "res-export", // for external usage
         "res-product",
+        "HertzifySettings/res",
     ],
+
     optional_uses_libs: ["com.android.extensions.appfunctions"],
     static_libs: [
         // External dependencies
