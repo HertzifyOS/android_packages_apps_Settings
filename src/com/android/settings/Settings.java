@@ -656,4 +656,7 @@ public class Settings extends SettingsActivity {
 
     // Network & internet -> Private DNS
     public static class PrivateDnsSettingsActivity extends SettingsActivity { /* empty */ }
+
+    // Hertzify Settings
+    public static class HertzifySettingsActivity extends SettingsActivity {}
 }

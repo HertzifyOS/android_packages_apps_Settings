@@ -51,6 +51,16 @@
     <com.android.settingslib.widget.UntitledPreferenceCategory
         android:order="-120"
         android:key="top_level_personalize_category">
+
+        <com.android.settings.widget.HomepagePreference
+            android:fragment="com.hertzify.settings.HertzifySettings"
+            android:icon="@drawable/ic_settings_hertzify_filled"
+            android:key="top_level_hertzify"
+            android:order="-100"
+            android:title="@string/hertzify_dashboard_title"
+            android:summary="@string/hertzify_dashboard_summary"
+            settings:controller="com.hertzify.settings.TopLevelHertzifySettingsPreferenceController"/>
+            
         <com.android.settings.widget.HomepagePreference
             android:fragment="com.android.settings.applications.AppDashboardFragment"
             android:icon="@drawable/ic_homepage_apps"
