@@ -251,6 +251,13 @@
             android:title="@string/tap_to_wake"
             android:summary="@string/tap_to_wake_summary"/>
 
+        <!-- Double tap to sleep -->
+        <com.hertzify.settings.preferences.SystemSettingSwitchPreference
+            android:key="double_tap_sleep_gesture"
+            android:title="@string/status_bar_double_tap_to_sleep_title"
+            android:summary="@string/status_bar_double_tap_to_sleep_summary"
+            android:defaultValue="false" />
+
         <com.hertzify.settings.preferences.GlobalSettingSwitchPreference
             android:key="wake_when_plugged_or_unplugged"
             android:title="@string/wake_when_plugged_or_unplugged_title"
