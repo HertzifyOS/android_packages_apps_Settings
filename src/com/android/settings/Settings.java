@@ -659,4 +659,7 @@ public class Settings extends SettingsActivity {
 
     // Hertzify Settings
     public static class HertzifySettingsActivity extends SettingsActivity {}
+
+    // LiveDisplay
+    public static class LiveDisplaySettingsActivity extends SettingsActivity { /* empty */ }
 }

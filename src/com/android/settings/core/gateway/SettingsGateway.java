@@ -223,6 +223,8 @@ import com.android.settings.wifi.p2p.WifiP2pSettings;
 import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSettings2;
 import com.android.settings.wifi.tether.WifiTetherSettings;
 
+import com.android.settings.livedisplay.LiveDisplaySettings;
+
 import com.hertzify.settings.HertzifySettings;
 
 public class SettingsGateway {
@@ -437,6 +439,7 @@ public class SettingsGateway {
             SafetyCenterFragment.class.getName(),
             PrivateDnsSettings.class.getName(),
             HertzifySettings.class.getName(),
+            LiveDisplaySettings.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
