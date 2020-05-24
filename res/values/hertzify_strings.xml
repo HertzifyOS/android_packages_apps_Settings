@@ -378,4 +378,9 @@
     <!-- Fingerprint lockout -->
     <string name="fingerprint_lockout_title">Disable fingerprint lockout</string>
     <string name="fingerprint_lockout_summary">Deactivates 30 second timeout as well as permanent lockout after multiple failed fingerprint unlock attempts</string>
+
+    <!-- Navbar options -->
+    <string name="navbar_category">Navigation bar</string>
+    <string name="show_navbar_hint_title">Navigation hint</string>
+    <string name="show_navbar_hint_summary">Show navigation hint bar at the bottom of the screen</string>
 </resources>
