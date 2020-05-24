@@ -207,4 +207,8 @@
     <string name="doze_double_tap_title">Double tap to check phone</string>
     <string name="doze_double_tap_summary">Pulse notifications by a double tap</string>
 
+    <!-- Navbar options -->
+    <string name="navbar_category">Navigation bar</string>
+    <string name="show_navbar_hint_title">Navigation hint</string>
+    <string name="show_navbar_hint_summary">Show navigation hint bar at the bottom of the screen</string>
 </resources>
