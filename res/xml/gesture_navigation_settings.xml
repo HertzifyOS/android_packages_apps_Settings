@@ -70,6 +70,16 @@
             settings:textEnd="@string/high_label"/>
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/navbar_category">
+
+        <com.hertzify.settings.preferences.SecureSettingSwitchPreference
+            android:key="navigation_bar_hint"
+            android:title="@string/show_navbar_hint_title"
+            android:summary="@string/show_navbar_hint_summary"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+
     <com.android.settingslib.widget.FooterPreference
         android:key="gesture_navigation_settings_footer"
         android:title="@string/back_sensitivity_dialog_message"

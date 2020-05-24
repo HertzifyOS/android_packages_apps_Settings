@@ -214,4 +214,9 @@
     <string name="hide_applist_summary">Prevent apps from checking selected apps from appslist</string>
     <string name="menu_show_overlay">Show overlay</string>
     <string name="menu_hide_overlay">Hide overlay</string>
+
+    <!-- Navbar options -->
+    <string name="navbar_category">Navigation bar</string>
+    <string name="show_navbar_hint_title">Navigation hint</string>
+    <string name="show_navbar_hint_summary">Show navigation hint bar at the bottom of the screen</string>
 </resources>
