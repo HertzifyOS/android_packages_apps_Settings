@@ -388,4 +388,9 @@
     <string name="navbar_ime_category">IME Button Space</string>
     <string name="show_ime_space_title">Show IME button space</string>
     <string name="show_ime_space_summary">Enable the input method quick switch feature to switch input methods or hide the on-screen keyboard from the feature bar at the bottom of the screen when typing</string>
+
+    <!-- Black theme for dark mode -->
+    <string name="berry_black_theme_title">Pure black</string>
+    <string name="berry_black_theme_purpose" translatable="false">Whether the pure dark theme is enabled</string>
+    <string name="berry_black_theme_summary">Pure black background for dark theme</string>
 </resources>
