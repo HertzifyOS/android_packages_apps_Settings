@@ -363,4 +363,8 @@
     <!-- Multi Audio Focus -->
     <string name="multi_audio_focus_title">Multi audio focus</string>
     <string name="multi_audio_focus_summary">Allow multiple apps to play audio simultaneously</string>
+
+    <!-- Lockscreen battery info indicator -->
+    <string name="lockscreen_battery_info_title">Charging Info on Lock Screen</string>
+    <string name="lockscreen_battery_info_summary">Show current, voltage, wattage, and temperature while charging</string>
 </resources>
