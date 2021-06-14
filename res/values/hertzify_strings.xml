@@ -103,4 +103,7 @@
     <string name="hertzify_build_date_purpose" translatable="false">The build date of HertzifyOS</string>
     <string name="hertzify_maintainer_purpose" translatable="false">The maintainer of this HertzifyOS build</string>
     <string name="vendor_security_key_purpose" translatable="false">The date of the last vendor security update</string>
+
+    <!-- Max refresh rate -->
+    <string name="max_refresh_rate_title">Peak refresh rate</string>
 </resources>
