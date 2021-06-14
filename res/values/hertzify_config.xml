@@ -41,4 +41,7 @@
     <!-- Descriptors of game controllers to hide from GameControllerListFragment. -->
     <string-array name="config_hidden_game_controller_descriptors" translatable="false">
     </string-array>
+
+    <!-- Whether to show peak refresh rate in display settings -->
+    <bool name="config_show_peak_refresh_rate_switch">false</bool>
 </resources>
