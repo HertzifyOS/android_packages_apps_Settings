@@ -393,4 +393,9 @@
     <string name="berry_black_theme_title">Pure black</string>
     <string name="berry_black_theme_purpose" translatable="false">Whether the pure dark theme is enabled</string>
     <string name="berry_black_theme_summary">Pure black background for dark theme</string>
+
+    <!-- Per-app volume -->
+    <string name="app_volume">App volume</string>
+    <string name="app_volume_title">Per-app volume control</string>
+    <string name="app_volume_summary">Show per-app volume button into volume dialog</string>
 </resources>
