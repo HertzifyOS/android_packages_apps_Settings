@@ -326,4 +326,7 @@
     <string name="local_app_backup_restore_title">Local app backup and restore</string>
     <string name="local_app_backup_restore_summary">Save APKs and app data as normal tar archives in internal storage</string>
 
+    <!-- Smart 5G -->
+    <string name="smart_5g_title">Smart 5G</string>
+    <string name="smart_5g_summary">Automatically switch between 5G and 4G to reduce battery consumption</string>
 </resources>
