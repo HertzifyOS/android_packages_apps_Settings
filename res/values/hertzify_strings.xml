@@ -322,4 +322,7 @@
     <string name="battery_info_monitor_enable">Enable battery monitor notification</string>
     <string name="battery_info_monitor_disable">Disable battery monitor notification</string>
 
+    <!-- Smart 5G -->
+    <string name="smart_5g_title">Smart 5G</string>
+    <string name="smart_5g_summary">Automatically switch between 5G and 4G to reduce battery consumption</string>
 </resources>
