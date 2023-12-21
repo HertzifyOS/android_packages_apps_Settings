@@ -367,4 +367,8 @@
     <!-- Lockscreen battery info indicator -->
     <string name="lockscreen_battery_info_title">Charging Info on Lock Screen</string>
     <string name="lockscreen_battery_info_summary">Show current, voltage, wattage, and temperature while charging</string>
+
+    <!-- Enforce DNS for VPN -->
+    <string name="vpn_enforce_dns_title">Disable for VPN</string>
+    <string name="vpn_enforce_dns_summary">Disable the private DNS when connected to a VPN\nWill restore upon disconnecting</string>
 </resources>
