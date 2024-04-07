@@ -111,6 +111,7 @@
     <string name="min_refresh_rate_title">Minimum refresh rate</string>
 
     <!-- Hardware info -->
+    <string name="device_market_name">Market Name</string>
     <string name="soc_model">SoC Model</string>
     <string name="total_ram">Total RAM</string>
 </resources>
