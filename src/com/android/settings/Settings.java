@@ -819,4 +819,7 @@ public class Settings extends SettingsActivity {
             }
         }
     }
+
+    /** HertzifyOS additions */
+    public static class PrivateDnsSettingsActivity extends SettingsActivity { /* empty */ }
 }
