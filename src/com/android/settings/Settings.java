@@ -656,4 +656,7 @@ public class Settings extends SettingsActivity {
     public static class SafetyCenterActivity extends SettingsActivity { }
     // LiveDisplay
     public static class LiveDisplaySettingsActivity extends SettingsActivity { /* empty */ }
+
+    // Network & internet -> Private DNS
+    public static class PrivateDnsSettingsActivity extends SettingsActivity { /* empty */ }
 }
