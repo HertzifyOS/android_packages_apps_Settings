@@ -130,6 +130,13 @@
             settings:controller="com.android.settings.display.DarkUIPreferenceController"
             settings:keywords="@string/keywords_dark_ui_mode"/>
 
+        <!-- System font -->
+        <Preference
+            android:key="android.theme.customization.fonts"
+            android:title="@string/themes_system_font_title"
+            android:summary="@string/themes_system_font_summary"
+            android:fragment="com.android.settings.display.Fonts"/>
+
         <Preference
             android:fragment="com.android.settings.accessibility.TextReadingPreferenceFragment"
             android:key="text_reading_options"
