@@ -484,4 +484,8 @@
     <!-- System font -->
     <string name="themes_system_font_title">System font</string>
     <string name="themes_system_font_summary">Set system font style</string>
+
+    <!-- Colored icons -->
+    <string name="status_bar_colored_icons_title">Colored icons</string>
+    <string name="status_bar_colored_icons_summary">Use launcher icons for app notifications</string>
 </resources>

@@ -242,5 +242,12 @@
             android:defaultValue="false"
             android:dependency="heads_up_notifications_enabled" />
 
+        <!-- Colored icons -->
+        <com.hertzify.settings.preferences.SystemSettingSwitchPreference
+            android:key="statusbar_colored_icons"
+            android:order="32"
+            android:title="@string/status_bar_colored_icons_title"
+            android:summary="@string/status_bar_colored_icons_summary"
+            android:defaultValue="false" />
     </PreferenceCategory>
 </PreferenceScreen>
