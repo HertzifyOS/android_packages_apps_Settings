@@ -26,4 +26,7 @@
 
     <!-- Show battery cycle count -->
     <bool name="config_show_battery_cycle_count" translatable="false">false</bool>
+
+    <!-- Battery Info: mAh -->
+    <integer name="config_battery_divider" translatable="false">1000</integer>
 </resources>
