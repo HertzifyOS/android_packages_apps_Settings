@@ -129,6 +129,13 @@
         android:title="@string/special_access"
         android:order="20"/>
 
+    <!-- Hide app list -->
+    <Preference
+        android:key="hide_applist_setting"
+        android:title="@string/hide_applist_title"
+        android:summary="@string/hide_applist_summary"
+        android:fragment="com.android.settings.security.HideAppListSettings" />
+
     <PreferenceCategory
         android:key="advanced_category"
         android:title="@string/advanced_apps"
