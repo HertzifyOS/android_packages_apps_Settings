@@ -211,4 +211,9 @@
     <string name="navbar_category">Navigation bar</string>
     <string name="show_navbar_hint_title">Navigation hint</string>
     <string name="show_navbar_hint_summary">Show navigation hint bar at the bottom of the screen</string>
+    
+    <!-- IME button space -->
+    <string name="navbar_ime_category">IME Button Space</string>
+    <string name="show_ime_space_title">Show IME button space</string>
+    <string name="show_ime_space_summary">Enable the input method quick switch feature to switch input methods or hide the on-screen keyboard from the feature bar at the bottom of the screen when typing</string>
 </resources>
