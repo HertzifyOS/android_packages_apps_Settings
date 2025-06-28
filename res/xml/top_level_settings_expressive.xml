@@ -54,7 +54,7 @@
 
         <com.android.settings.widget.HomepagePreference
             android:fragment="com.hertzify.settings.HertzifySettings"
-            android:icon="@drawable/ic_settings_hertzify_filled"
+            android:icon="@drawable/ic_homepage_hertzify"
             android:key="top_level_hertzify"
             android:order="-100"
             android:title="@string/hertzify_dashboard_title"
