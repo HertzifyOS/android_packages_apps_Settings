@@ -136,6 +136,13 @@
         android:summary="@string/hide_applist_summary"
         android:fragment="com.android.settings.security.HideAppListSettings" />
 
+    <!-- QuickSwitch -->
+    <Preference
+        android:key="quickswitch"
+        android:title="@string/quickswitch_launcher_title" 
+        android:summary="@string/quickswitch_launcher_summary" 
+        android:fragment="com.android.settings.applications.QuickSwitch" /> 
+        
     <PreferenceCategory
         android:key="advanced_category"
         android:title="@string/advanced_apps"
