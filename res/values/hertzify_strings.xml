@@ -253,4 +253,10 @@
     <string name="incall_vibrate_connect_title">Vibrate on connect</string>
     <string name="incall_vibrate_call_wait_title">Vibrate on call waiting</string>
     <string name="incall_vibrate_disconnect_title">Vibrate on disconnect</string>
+
+    <!-- Doze brightness -->
+    <string name="doze_brightness_force_title">Force Doze brightness values</string>
+    <string name="doze_brightness_force_summary">Use custom brightness values instead of screen brightness</string>
+    <string name="ambient_pulse_brightness_title">Ambient display brightness</string>
+    <string name="ambient_doze_brightness_title">Always on display brightness</string>
 </resources>
