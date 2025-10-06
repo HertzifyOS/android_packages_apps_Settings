@@ -129,7 +129,31 @@
             android:summary="@string/doze_summary"
             settings:controller="com.android.settings.display.AmbientDisplayNotificationsPreferenceController" />
 
-    </PreferenceCategory>
+        <!-- Doze brightness -->
+        <com.hertzify.settings.preferences.SystemSettingSwitchPreference
+            android:key="doze_brightness_force"
+            android:title="@string/doze_brightness_force_title"
+            android:summary="@string/doze_brightness_force_summary"
+            android:defaultValue="false" />
+
+        <com.hertzify.settings.preferences.SystemSettingSeekBarPreference
+            android:key="doze_brightness"
+            android:title="@string/ambient_doze_brightness_title"
+            android:max="255"
+            settings:min="1"
+            android:persistent="false"
+            android:dependency="doze_brightness_force"
+            settings:controller="com.android.settings.security.DozeBrightnessPreferenceController" />
+
+        <com.hertzify.settings.preferences.SystemSettingSeekBarPreference
+            android:key="pulse_brightness"
+            android:title="@string/ambient_pulse_brightness_title"
+            android:max="255"
+            settings:min="1"
+            android:persistent="false"
+            android:dependency="doze_brightness_force"
+            settings:controller="com.android.settings.security.DozeBrightnessPreferenceController" />
+            </PreferenceCategory>
 
     <!-- Work profile settings are at the bottom with high order value to avoid users thinking that
          any of the above settings (including dynamic) are specific to the work profile. -->
