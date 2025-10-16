@@ -230,4 +230,10 @@
     <!-- Force LTE_CA -->
     <string name="force_lte_ca_title">Carrier Aggregation</string>
     <string name="force_lte_ca_summary">Enhances LTE bandwidth by aggregating supported bands</string>
+
+    <!-- Override Mock Location restriction -->
+    <string name="override_mock_location_title">Override MockLocation restriction</string>
+    <string name="override_mock_location_summary">When enabled, apps cannot detect mock locations</string>
+    <string name="override_mock_location_summary_on">Mock locations are hidden from apps</string>
+    <string name="override_mock_location_summary_off">Apps can detect mock locations</string>
 </resources>
