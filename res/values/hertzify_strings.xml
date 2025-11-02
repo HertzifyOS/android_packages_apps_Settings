@@ -447,4 +447,8 @@
     <string name="bluetooth_timeout">Bluetooth timeout</string>
     <string name="bluetooth_timeout_summary">Do not automatically turn off Bluetooth</string>
     <string name="bluetooth_timeout_summary_auto">Bluetooth will turn off after <xliff:g id="timeout_description">%1$s</xliff:g> if no devices connected</string>
+
+    <!-- Floating rotation button -->
+    <string name="floating_rotation_button_title">Floating rotate button</string>
+    <string name="floating_rotation_button_summary">Show a floating rotate button when device is rotated</string>
 </resources>
