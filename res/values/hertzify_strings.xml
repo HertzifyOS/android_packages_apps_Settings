@@ -393,4 +393,10 @@
     <string name="language_picker_page">Language picker page</string>
     <string name="search_region">Search regions</string>
     <string name="search_region_page">Search region page</string>
+
+    <!-- Hertzify OS specific strings -->
+    <string name="hertzify_maintainer">Maintainer</string>
+    <string name="hertzify_version">Hertzify version</string>
+    <string name="hertzify_vendor_security_patch">Vendor security patch level</string>
+    <string name="hertzify_build_date">Build date</string>
 </resources>
