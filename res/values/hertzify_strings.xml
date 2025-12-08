@@ -424,4 +424,10 @@
     <!-- Battery saver refresh rate -->
     <string name="battery_saver_refresh_rate_title">Reduce refresh rate</string>
     <string name="battery_saver_refresh_rate_summary">Use 60 Hz screen refresh rate to save power when Battery Saver is on</string>
+
+    <!-- Hertzify OS specific strings -->
+    <string name="hertzify_maintainer">Maintainer</string>
+    <string name="hertzify_version">Hertzify version</string>
+    <string name="hertzify_vendor_security_patch">Vendor security patch level</string>
+    <string name="hertzify_build_date">Build date</string>
 </resources>
