@@ -93,4 +93,14 @@
     <string name="battery_maximum_capacity">Maximum capacity</string>
     <string name="battery_maximum_capacity_summary">%1$d mAh (%2$d%%)</string>
     <string name="battery_maximum_capacity_not_available" translatable="false">@string/battery_cycle_count_not_available</string>
+
+    <!-- Hertzify OS specific strings -->
+    <string name="hertzify_maintainer">Maintainer</string>
+    <string name="hertzify_version">Hertzify version</string>
+    <string name="hertzify_vendor_security_patch">Vendor security patch level</string>
+    <string name="hertzify_build_date">Build date</string>
+    <string name="hertzify_version_purpose" translatable="false">The version of HertzifyOS installed on this device</string>
+    <string name="hertzify_build_date_purpose" translatable="false">The build date of HertzifyOS</string>
+    <string name="hertzify_maintainer_purpose" translatable="false">The maintainer of this HertzifyOS build</string>
+    <string name="vendor_security_key_purpose" translatable="false">The date of the last vendor security update</string>
 </resources>
