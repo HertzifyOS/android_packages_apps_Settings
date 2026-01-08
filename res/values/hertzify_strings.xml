@@ -452,4 +452,8 @@
     <string name="app_lock_credential_incorrect">Incorrect PIN, Password, or Pattern.</string>
     <string name="app_lock_biometrics_title">Allow Biometrics</string>
     <string name="app_lock_biometrics_summary">Unlock locked apps using fingerprint or face unlock when custom lock is enabled</string>
+
+    <!-- Multi Audio Focus -->
+    <string name="multi_audio_focus_title">Multi audio focus</string>
+    <string name="multi_audio_focus_summary">Allow multiple apps to play audio simultaneously</string>
 </resources>
