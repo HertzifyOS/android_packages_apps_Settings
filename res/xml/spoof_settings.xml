@@ -27,4 +27,41 @@
             android:summary="@string/pif_no_props" />
 
     </PreferenceCategory>
+
+    <!-- ===== TRICKY STORE – KEYBOX ===== -->
+    <PreferenceCategory
+        android:key="cat_keybox"
+        android:title="@string/keybox_category_title">
+
+        <Preference
+            android:key="keybox_import"
+            android:title="@string/keybox_import_title"
+            android:summary="@string/keybox_not_found" />
+
+        <Preference
+            android:key="keybox_delete"
+            android:title="@string/keybox_delete_pref_title"
+            android:summary="@string/keybox_delete_summary"
+            android:enabled="false" />
+
+    </PreferenceCategory>
+
+    <!-- ===== TRICKY STORE – TARGET APPS ===== -->
+    <PreferenceCategory
+        android:key="cat_target"
+        android:title="@string/target_category_title">
+
+        <!-- Opens TargetAppsFragment -->
+        <Preference
+            android:key="target_manage_apps"
+            android:title="@string/target_manage_title"
+            android:summary="@string/target_no_apps" />
+
+        <!-- Import a pre-built target.txt -->
+        <Preference
+            android:key="target_import_file"
+            android:title="@string/target_import_title"
+            android:summary="@string/target_import_summary" />
+
+    </PreferenceCategory>
 </PreferenceScreen>
