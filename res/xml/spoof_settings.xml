@@ -64,4 +64,18 @@
             android:summary="@string/target_import_summary" />
 
     </PreferenceCategory>
+
+
+    <!-- ===== APP SPOOFING ===== -->
+    <PreferenceCategory
+        android:key="cat_app_spoof"
+        android:title="@string/app_spoof_category_title">
+
+        <!-- Opens AppSpoofFragment -->
+        <Preference
+            android:key="app_spoof_manage"
+            android:title="@string/app_spoof_manage_title"
+            android:summary="@string/app_spoof_manage_summary" />
+
+    </PreferenceCategory>
 </PreferenceScreen>

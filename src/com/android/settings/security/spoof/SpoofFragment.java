@@ -42,13 +42,14 @@ public class SpoofFragment extends SettingsBasePreferenceFragment {
 
     private static final String TAG = "SpoofFragment";
 
-    private static final String KEY_PIF_FETCH_BETA  = "pif_fetch_beta";
-    private static final String KEY_PIF_IMPORT_FILE = "pif_import_file";
-    private static final String KEY_PIF_SHOW_PROPS  = "pif_show_props";
-    private static final String KEY_KEYBOX_IMPORT   = "keybox_import";
-    private static final String KEY_KEYBOX_DELETE   = "keybox_delete";
-    private static final String KEY_TARGET_MANAGE   = "target_manage_apps";
-    private static final String KEY_TARGET_IMPORT   = "target_import_file";
+    private static final String KEY_PIF_FETCH_BETA   = "pif_fetch_beta";
+    private static final String KEY_PIF_IMPORT_FILE  = "pif_import_file";
+    private static final String KEY_PIF_SHOW_PROPS   = "pif_show_props";
+    private static final String KEY_KEYBOX_IMPORT    = "keybox_import";
+    private static final String KEY_KEYBOX_DELETE    = "keybox_delete";
+    private static final String KEY_TARGET_MANAGE    = "target_manage_apps";
+    private static final String KEY_TARGET_IMPORT    = "target_import_file";
+    private static final String KEY_APP_SPOOF_MANAGE = "app_spoof_manage";
 
     private final Handler mHandler = new Handler(Looper.getMainLooper());
 
@@ -66,6 +67,7 @@ public class SpoofFragment extends SettingsBasePreferenceFragment {
     private Preference mDeleteKeybox;
     private Preference mManageTarget;
     private Preference mImportTarget;
+    private Preference mManageAppSpoof;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -115,13 +117,14 @@ public class SpoofFragment extends SettingsBasePreferenceFragment {
     }
 
     private void bindPreferences() {
-        mFetchBeta    = requirePreference(KEY_PIF_FETCH_BETA);
-        mImportPif    = requirePreference(KEY_PIF_IMPORT_FILE);
-        mShowProps    = requirePreference(KEY_PIF_SHOW_PROPS);
-        mImportKeybox = requirePreference(KEY_KEYBOX_IMPORT);
-        mDeleteKeybox = requirePreference(KEY_KEYBOX_DELETE);
-        mManageTarget = requirePreference(KEY_TARGET_MANAGE);
-        mImportTarget = requirePreference(KEY_TARGET_IMPORT);
+        mFetchBeta     = requirePreference(KEY_PIF_FETCH_BETA);
+        mImportPif     = requirePreference(KEY_PIF_IMPORT_FILE);
+        mShowProps     = requirePreference(KEY_PIF_SHOW_PROPS);
+        mImportKeybox  = requirePreference(KEY_KEYBOX_IMPORT);
+        mDeleteKeybox  = requirePreference(KEY_KEYBOX_DELETE);
+        mManageTarget  = requirePreference(KEY_TARGET_MANAGE);
+        mImportTarget  = requirePreference(KEY_TARGET_IMPORT);
+        mManageAppSpoof = requirePreference(KEY_APP_SPOOF_MANAGE);
 
         mFetchBeta.setOnPreferenceClickListener(p -> { fetchBetaPif(); return true; });
         mImportPif.setOnPreferenceClickListener(p -> { openPifFilePicker(); return true; });
@@ -135,6 +138,11 @@ public class SpoofFragment extends SettingsBasePreferenceFragment {
             return true;
         });
         mImportTarget.setOnPreferenceClickListener(p -> { openTargetFilePicker(); return true; });
+
+        mManageAppSpoof.setOnPreferenceClickListener(p -> {
+            openFragment(new AppSpoofFragment());
+            return true;
+        });
     }
 
     private void refreshSummaries() {
@@ -292,6 +300,9 @@ public class SpoofFragment extends SettingsBasePreferenceFragment {
         if (fragment instanceof TargetAppsFragment) {
             fragmentClass = TargetAppsFragment.class.getName();
             title = getString(R.string.target_screen_title);
+        } else if (fragment instanceof AppSpoofFragment) {
+            fragmentClass = AppSpoofFragment.class.getName();
+            title = getString(R.string.app_spoof_screen_title);
         } else {
             return;
         }
