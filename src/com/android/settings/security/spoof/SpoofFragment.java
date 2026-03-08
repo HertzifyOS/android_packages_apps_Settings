@@ -29,6 +29,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AlertDialog;
 import androidx.preference.Preference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settings.R;
 import com.android.settingslib.widget.SettingsBasePreferenceFragment;
@@ -50,6 +51,7 @@ public class SpoofFragment extends SettingsBasePreferenceFragment {
     private static final String KEY_TARGET_MANAGE    = "target_manage_apps";
     private static final String KEY_TARGET_IMPORT    = "target_import_file";
     private static final String KEY_APP_SPOOF_MANAGE = "app_spoof_manage";
+    private static final String KEY_PIF_SPOOF_PHOTOS = "pif_spoof_photos";
 
     private final Handler mHandler = new Handler(Looper.getMainLooper());
 
@@ -63,6 +65,7 @@ public class SpoofFragment extends SettingsBasePreferenceFragment {
     private Preference mFetchBeta;
     private Preference mImportPif;
     private Preference mShowProps;
+    private SwitchPreferenceCompat mSpoofPhotos;
     private Preference mImportKeybox;
     private Preference mDeleteKeybox;
     private Preference mManageTarget;
@@ -120,6 +123,7 @@ public class SpoofFragment extends SettingsBasePreferenceFragment {
         mFetchBeta     = requirePreference(KEY_PIF_FETCH_BETA);
         mImportPif     = requirePreference(KEY_PIF_IMPORT_FILE);
         mShowProps     = requirePreference(KEY_PIF_SHOW_PROPS);
+        mSpoofPhotos   = (SwitchPreferenceCompat) requirePreference(KEY_PIF_SPOOF_PHOTOS);
         mImportKeybox  = requirePreference(KEY_KEYBOX_IMPORT);
         mDeleteKeybox  = requirePreference(KEY_KEYBOX_DELETE);
         mManageTarget  = requirePreference(KEY_TARGET_MANAGE);
@@ -129,6 +133,12 @@ public class SpoofFragment extends SettingsBasePreferenceFragment {
         mFetchBeta.setOnPreferenceClickListener(p -> { fetchBetaPif(); return true; });
         mImportPif.setOnPreferenceClickListener(p -> { openPifFilePicker(); return true; });
         mShowProps.setOnPreferenceClickListener(p -> { showCurrentProps(); return true; });
+
+        mSpoofPhotos.setChecked(mPifManager.isSpoofPhotosEnabled());
+        mSpoofPhotos.setOnPreferenceChangeListener((p, v) -> {
+            mPifManager.setSpoofPhotos((Boolean) v);
+            return true;
+        });
 
         mImportKeybox.setOnPreferenceClickListener(p -> { openKeyboxFilePicker(); return true; });
         mDeleteKeybox.setOnPreferenceClickListener(p -> { confirmDeleteKeybox(); return true; });

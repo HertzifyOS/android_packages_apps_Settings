@@ -39,6 +39,8 @@ public class PifManager {
             "pif.prop",
             "pif.json");
 
+    private static final String KEY_SPOOF_PHOTOS = "spoofPhotos";
+
     private final Context mContext;
 
     public PifManager(Context context) {
@@ -91,6 +93,21 @@ public class PifManager {
         } catch (Exception e) {
             Log.e(TAG, "Failed to apply PIF", e);
         }
+    }
+
+    public boolean isSpoofPhotosEnabled() {
+        Map<String, String> props = getCurrentProperties();
+        String val = props.get(KEY_SPOOF_PHOTOS);
+        return "true".equalsIgnoreCase(val) || "1".equals(val);
+    }
+
+    public void setSpoofPhotos(boolean enabled) {
+        File active = findActiveFile();
+        if (active == null) {
+            Log.w(TAG, "setSpoofPhotos: no active config");
+            return;
+        }
+        updateConfigKey(active, KEY_SPOOF_PHOTOS, String.valueOf(enabled));
     }
 
     private void ensureDir() {

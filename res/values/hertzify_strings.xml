@@ -646,4 +646,9 @@
     <string name="app_spoof_profile_saved">Profile \"%1$s\" saved</string>
     <string name="app_spoof_profile_updated">Profile \"%1$s\" updated</string>
     <string name="app_spoof_add_prop">+ Add property</string>
+
+    <!-- Google Photos spoofing -->
+    <string name="pif_options_category">PIF Options</string>
+    <string name="pif_spoof_photos_title">Spoof Google Photos</string>
+    <string name="pif_spoof_photos_summary">Appear as Pixel XL for unlimited original quality backup</string>
 </resources>
