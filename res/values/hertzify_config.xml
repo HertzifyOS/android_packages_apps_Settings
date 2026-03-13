@@ -37,4 +37,7 @@
 
     <!-- Whether to show min refresh rate in display settings -->
     <bool name="config_show_min_refresh_rate_switch">false</bool>
+
+    <!-- Uses the legacy UDFPS enrollment UI with side text instead of a footer button. -->
+    <bool name="config_useLegacyUdfpsUi" translatable="false">false</bool>
 </resources>
