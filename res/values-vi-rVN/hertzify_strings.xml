@@ -320,4 +320,9 @@
     <string name="language_picker_page">Trang chọn ngôn ngữ</string>
     <string name="search_region">Tìm khu vực</string>
     <string name="search_region_page">Trang chọn khu vực</string>
+    <!-- Hertzify OS specific strings -->
+    <string name="hertzify_maintainer">Người duy trì</string>
+    <string name="hertzify_version">Phiên bản HertzifyOS</string>
+    <string name="hertzify_vendor_security_patch">Bản và bảo mật vendor</string>
+    <string name="hertzify_build_date">Ngày dựng</string>
 </resources>
