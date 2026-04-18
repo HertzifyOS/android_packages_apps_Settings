@@ -325,4 +325,37 @@
     <string name="hertzify_version">Phiên bản HertzifyOS</string>
     <string name="hertzify_vendor_security_patch">Bản và bảo mật vendor</string>
     <string name="hertzify_build_date">Ngày dựng</string>
+    <!-- Display : Rotation -->
+    <string name="display_rotation_title">Cài đặt xoay</string>
+    <string name="display_rotation_enabled">Tự động xoay được bật</string>
+    <string name="display_rotation_disabled">Tự động xoay đã tắt</string>
+    <string name="display_lockscreen_rotation_title">Màn hình khoá</string>
+    <string name="display_rotation_unit">độ</string>
+    <string name="display_rotation_category_title">Chế độ xoay</string>
+    <string name="display_rotation_0_title">0 độ</string>
+    <string name="display_rotation_90_title">90 độ</string>
+    <string name="display_rotation_180_title">180 độ</string>
+    <string name="display_rotation_270_title">270 độ</string>
+    <!-- Summary for list to control apps that ignore battery saving restrictions -->
+    <string name="high_power_apps_summary">Tối ưu hoá pin cho từng ứng dụng</string>
+    <!-- Vibration patterns -->
+    <string name="vibration_pattern_title">Cường độ rung chuông</string>
+    <string name="pattern_dzzz_dzzz">dzzz-dzzz</string>
+    <string name="pattern_dzzz_da">dzzz-da</string>
+    <string name="pattern_mm_mm_mm">mm-mm-mm</string>
+    <string name="pattern_da_da_dzzz">da-da-dzzz</string>
+    <string name="pattern_da_dzzz_da">da-dzzz-da</string>
+    <string name="pattern_custom">Tùy chỉnh</string>
+    <string name="custom_vibration_pattern_title">Tuỳ chỉnh riêng</string>
+    <string name="custom_vibration_pattern_summary">Tùy chỉnh chế độ rung</string>
+    <!-- Incall vibrate options -->
+    <string name="incall_vibration_category">Tùy chọn rung trong cuộc gọi</string>
+    <string name="incall_vibrate_connect_title">Rung khi kết nối</string>
+    <string name="incall_vibrate_call_wait_title">Rung khi chờ cuộc gọi</string>
+    <string name="incall_vibrate_disconnect_title">Rung khi ngắt kết nối</string>
+    <!-- Doze brightness -->
+    <string name="doze_brightness_force_title">Dùng độ sáng tuỳ chỉnh cho Doze</string>
+    <string name="doze_brightness_force_summary">Sử dụng giá trị độ sáng tùy chỉnh thay vì độ sáng màn hình</string>
+    <string name="ambient_pulse_brightness_title">Độ sáng Ambient display</string>
+    <string name="ambient_doze_brightness_title">Độ sáng Always on display</string>
 </resources>
