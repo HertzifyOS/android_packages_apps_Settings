@@ -358,4 +358,9 @@
     <string name="doze_brightness_force_summary">Use custom brightness values instead of screen brightness</string>
     <string name="ambient_pulse_brightness_title">Ambient display brightness</string>
     <string name="ambient_doze_brightness_title">Always on display brightness</string>
+    <!-- Notch: Full screen apps -->
+    <string name="display_cutout_force_fullscreen_title">Full screen apps</string>
+    <string name="display_cutout_force_fullscreen_summary">Force apps to ignore notch space</string>
+    <string name="display_cutout_force_fullscreen_search">Search</string>
+    <string name="display_cutout_force_fullscreen_search_apps">Search apps</string>
 </resources>
