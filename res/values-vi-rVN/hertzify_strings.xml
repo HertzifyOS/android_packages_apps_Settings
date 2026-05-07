@@ -363,4 +363,7 @@
     <string name="display_cutout_force_fullscreen_summary">Buộc các ứng dụng bỏ qua không gian notch</string>
     <string name="display_cutout_force_fullscreen_search">Tìm kiếm</string>
     <string name="display_cutout_force_fullscreen_search_apps">Tìm ứng dụng</string>
+    <!-- Per-app GPU composition -->
+    <string name="use_gpu_for_screen_composition_title">Sử dụng GPU để xử lý</string>
+    <string name="use_gpu_for_screen_composition_summary">Chọn các ứng dụng cần tắt lớp phủ phần cứng khi đang sử dụng.</string>
 </resources>
