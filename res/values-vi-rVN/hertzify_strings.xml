@@ -363,4 +363,48 @@
     <string name="display_cutout_force_fullscreen_summary">Buộc các ứng dụng bỏ qua không gian notch</string>
     <string name="display_cutout_force_fullscreen_search">Tìm kiếm</string>
     <string name="display_cutout_force_fullscreen_search_apps">Tìm ứng dụng</string>
+    <!-- Per-app GPU composition -->
+    <string name="use_gpu_for_screen_composition_title">Sử dụng GPU để xử lý</string>
+    <string name="use_gpu_for_screen_composition_summary">Chọn các ứng dụng cần tắt lớp phủ phần cứng khi đang sử dụng.</string>
+    <string name="use_gpu_for_screen_composition_turn_on_all">Bật cho tất cả ứng dụng</string>
+    <string name="use_gpu_for_screen_composition_turn_off_all">Tắt cho tất cả ứng dụng</string>
+    <!-- Sleep Mode -->
+    <string name="sleep_mode_title">Chế độ ngủ</string>
+    <string name="sleep_mode_summary_on">Bật / <xliff:g name="auto_mode_summary" example="Không bao giờ tự động tắt">%1$s</xliff:g></string>
+    <string name="sleep_mode_summary_off">Tắt / <xliff:g name="auto_mode_summary" example="Không bao giờ tự động bật">%1$s</xliff:g></string>
+    <string name="sleep_mode_ringer_title">Chế độ chuông</string>
+    <string name="sleep_mode_ringer_off_title">Không thay đổi</string>
+    <string name="sleep_mode_ringer_vibrate_title">Rung</string>
+    <string name="sleep_mode_ringer_dnd_title">Không làm phiền</string>
+    <string name="sleep_mode_ringer_silent_title">Im lặng</string>
+    <string name="sleep_mode_schedule_sunset">Hoàng hôn</string>
+    <string name="sleep_mode_schedule_sunrise">Bình minh</string>
+    <string name="sleep_mode_schedule_mixed_sunset">Bật từ hoàng hôn đến thời gian tuỳ chọn</string>
+    <string name="sleep_mode_schedule_mixed_sunrise">Bật từ thời gian tuỳ chọn đến bình minh</string>
+    <string name="sleep_mode_toggles_title">Chuyển đổi</string>
+    <string name="sleep_mode_wifi_toggle_title">Tắt Wi-Fi</string>
+    <string name="sleep_mode_wifi_toggle_summary">Tắt Wi-Fi khi bật Chế độ ngủ</string>
+    <string name="sleep_mode_bluetooth_toggle_title">Tắt Bluetooth</string>
+    <string name="sleep_mode_bluetooth_toggle_summary">Tắt Bluetooth khi bật Chế độ Ngủ</string>
+    <string name="sleep_mode_cellular_toggle_title">Tắt dữ liệu di động</string>
+    <string name="sleep_mode_cellular_toggle_summary">Tắt dữ liệu di động khi bật Chế độ Ngủ</string>
+    <string name="sleep_mode_location_toggle_title">Tắt vị trí</string>
+    <string name="sleep_mode_location_toggle_summary">Tắt vị trí khi bật Chế độ Ngủ</string>
+    <string name="sleep_mode_sensors_toggle_title">Tắt cảm biến</string>
+    <string name="sleep_mode_sensors_toggle_summary">Tắt cảm biến khi bật Chế độ Ngủ</string>
+    <string name="sleep_mode_idle_toggle_title">Ngủ sâu</string>
+    <string name="sleep_mode_idle_toggle_summary">Tạm dừng hoạt động nền của các ứng dụng người dùng khi Chế độ ngủ được kích hoạt. Thông báo có thể bị trì hoãn cho đến khi chế độ này kết thúc.</string>
+    <string name="sleep_mode_display_text">Chế độ ngủ cho phép bạn tắt một số dịch vụ nhất định để giúp tiết kiệm pin và tắt tiếng điện thoại khi bạn ngủ.</string>
+    <!-- Display settings screen, activation button action for manual mode. [CHAR LIMIT=40] -->
+    <string name="night_display_activation_on_manual">Bật ngay</string>
+    <!-- Display settings screen, deactivation button action for manual mode. [CHAR LIMIT=40] -->
+    <string name="night_display_activation_off_manual">Tắt ngay</string>
+    <!-- Display settings screen, activation button action for sunset-to-sunrise schedule [CHAR LIMIT=40] -->
+    <string name="night_display_activation_on_twilight">Bật cho đến bình minh</string>
+    <!-- Display settings screen, deactivation button action for sunset-to-sunrise schedule [CHAR LIMIT=40] -->
+    <string name="night_display_activation_off_twilight">Tắt cho đến hoàng hôn</string>
+    <!-- Display settings screen, activation button action for custom schedule [CHAR LIMIT=40] -->
+    <string name="night_display_activation_on_custom">Bật cho đến <xliff:g name="time" example="6 AM">%1$s</xliff:g></string>
+    <!-- Display settings screen, deactivation button action for custom schedule [CHAR LIMIT=40] -->
+    <string name="night_display_activation_off_custom">Tắt cho đến <xliff:g name="time" example="10 PM">%1$s</xliff:g></string>
 </resources>
