@@ -47,4 +47,7 @@
 
     <!-- Whether to show min refresh rate in display settings -->
     <bool name="config_show_min_refresh_rate_switch">false</bool>
+
+    <!-- Whether to show the search box in the Setup Wizard locale picker. -->
+    <bool name="config_show_setuplocalepicker_region_searchbox">true</bool>
 </resources>
