@@ -552,4 +552,8 @@
     <string name="battery_info_monitor_enable">Enable battery monitor notification</string>
     <string name="battery_info_monitor_disable">Disable battery monitor notification</string>
 
+    <!-- backup -->
+    <string name="local_app_backup_restore_title">Local app backup and restore</string>
+    <string name="local_app_backup_restore_summary">Save APKs and app data as normal tar archives in internal storage</string>
+
 </resources>
