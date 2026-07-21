@@ -122,4 +122,7 @@
     <!-- USB configuration -->
     <string name="usb_default_config_title">USB configuration</string>
     <string name="usb_default_config_summary">Choose the default behavior when connected to a device via USB</string>
+
+    <!-- Expressive QR -->
+    <string name="wifi_qr_code_animation_control">pause the animation</string>
 </resources>
