@@ -56,6 +56,8 @@ import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Shield
+import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -67,10 +69,12 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.LoadingIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -237,11 +241,38 @@ fun AppLockSettingsContent(
     fragment: AppLockSettingsFragment,
     pm: PackageManager
 ) {
+    val context = fragment.requireContext()
     val scope = rememberCoroutineScope()
     var searchQuery by remember { mutableStateOf("") }
     var showSystemApps by remember { mutableStateOf(false) }
     var isLoading by remember { mutableStateOf(true) }
     val allApps = remember { mutableStateListOf<AppEntry>() }
+
+    var showTimeoutDialog by remember { mutableStateOf(false) }
+    var currentTimeout by remember {
+        mutableStateOf(
+            android.provider.Settings.Secure.getLong(
+                context.contentResolver,
+                "app_lock_timeout",
+                5000L
+            )
+        )
+    }
+
+    val timeoutOptions = remember {
+        listOf(
+            0L to context.getString(R.string.app_lock_timeout_immediately),
+            5000L to context.getString(R.string.app_lock_timeout_5s),
+            30000L to context.getString(R.string.app_lock_timeout_30s),
+            60000L to context.getString(R.string.app_lock_timeout_1m),
+            300000L to context.getString(R.string.app_lock_timeout_5m),
+            -1L to context.getString(R.string.app_lock_timeout_screen_lock)
+        )
+    }
+
+    val currentTimeoutLabel = remember(currentTimeout) {
+        timeoutOptions.find { it.first == currentTimeout }?.second ?: context.getString(R.string.app_lock_timeout_5s)
+    }
 
     fun loadApps() {
         isLoading = true
@@ -340,6 +371,118 @@ fun AppLockSettingsContent(
                         )
                     }
                 }
+            }
+
+            Spacer(modifier = Modifier.height(12.dp))
+
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(24.dp),
+                colors = CardDefaults.cardColors(
+                    containerColor = MaterialTheme.colorScheme.surfaceBright
+                ),
+                onClick = { showTimeoutDialog = true }
+            ) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(20.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .size(40.dp)
+                            .clip(CircleShape)
+                            .background(MaterialTheme.colorScheme.secondaryContainer),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Icon(
+                            Icons.Default.Settings,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.onSecondaryContainer,
+                            modifier = Modifier.size(20.dp)
+                        )
+                    }
+                    Spacer(modifier = Modifier.width(16.dp))
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            text = stringResource(R.string.app_lock_timeout_title),
+                            style = MaterialTheme.typography.titleMedium,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = currentTimeoutLabel,
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                }
+            }
+
+            if (showTimeoutDialog) {
+                AlertDialog(
+                    onDismissRequest = { showTimeoutDialog = false },
+                    title = {
+                        Text(
+                            text = stringResource(R.string.app_lock_timeout_title),
+                            style = MaterialTheme.typography.titleLarge,
+                            fontWeight = FontWeight.Bold
+                        )
+                    },
+                    text = {
+                        Column(
+                            modifier = Modifier.fillMaxWidth(),
+                            verticalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            Text(
+                                text = stringResource(R.string.app_lock_timeout_summary),
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.padding(bottom = 8.dp)
+                            )
+                            timeoutOptions.forEach { (value, label) ->
+                                Row(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .clickable {
+                                            android.provider.Settings.Secure.putLong(
+                                                context.contentResolver,
+                                                "app_lock_timeout",
+                                                value
+                                            )
+                                            currentTimeout = value
+                                            showTimeoutDialog = false
+                                        }
+                                        .padding(vertical = 8.dp),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    RadioButton(
+                                        selected = (currentTimeout == value),
+                                        onClick = {
+                                            android.provider.Settings.Secure.putLong(
+                                                context.contentResolver,
+                                                "app_lock_timeout",
+                                                value
+                                            )
+                                            currentTimeout = value
+                                            showTimeoutDialog = false
+                                        }
+                                    )
+                                    Spacer(modifier = Modifier.width(12.dp))
+                                    Text(
+                                        text = label,
+                                        style = MaterialTheme.typography.bodyLarge
+                                    )
+                                }
+                            }
+                        }
+                    },
+                    confirmButton = {
+                        TextButton(onClick = { showTimeoutDialog = false }) {
+                            Text(stringResource(android.R.string.cancel))
+                        }
+                    }
+                )
             }
 
             Spacer(modifier = Modifier.height(12.dp))
